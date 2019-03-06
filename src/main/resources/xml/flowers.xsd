@@ -1,0 +1,82 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="flowers">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="flower" type="flowerType" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="flowerType">
+        <xsd:sequence>
+
+            <xsd:element name="name" type="xsd:string"/>
+
+            <xsd:element name="soil">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="підзолиста"/>
+                        <xsd:enumeration value="ґрунтова"/>
+                        <xsd:enumeration value="дерново-підзолиста"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="origin" type="xsd:string"/>
+
+            <xsd:element name="visual_parameters">
+                <xsd:complexType>
+                    <xsd:sequence>
+
+                        <xsd:element name="stem_color" type="xsd:string"/>
+
+                        <xsd:element name="leaf_color" type="xsd:string"/>
+
+                        <xsd:element name="plant_average_size">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:decimal">
+                                    <xsd:minInclusive value="0.1"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="growing_tips">
+                <xsd:complexType>
+                    <xsd:sequence>
+
+                        <xsd:element name="temperature">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:decimal">
+                                    <xsd:minExclusive value="0.0"/>
+                                    <xsd:maxInclusive value="75.0"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+
+                        <xsd:element name="light" type="xsd:boolean"/>
+
+                        <xsd:element name="watering" type="xsd:int"/>
+
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="multiplying">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="листками"/>
+                        <xsd:enumeration value="живцями"/>
+                        <xsd:enumeration value="насінням"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

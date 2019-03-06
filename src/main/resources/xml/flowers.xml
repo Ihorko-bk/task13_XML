@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="flowers.xsl"?>
+
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="flowers.xsd">
+    <flower>
+        <name>Рослина1</name>
+        <soil>дерново-підзолиста</soil>
+        <origin>Якесь місце походження рослини</origin>
+        <visual_parameters>
+            <stem_color>зелений</stem_color>
+            <leaf_color>червоний</leaf_color>
+            <plant_average_size>10</plant_average_size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>30</temperature>
+            <light>true</light>
+            <watering>1000</watering>
+        </growing_tips>
+        <multiplying>живцями</multiplying>
+    </flower>
+    <flower>
+        <name>Квітка</name>
+        <soil>ґрунтова</soil>
+        <origin>Україна</origin>
+        <visual_parameters>
+            <stem_color>зелений</stem_color>
+            <leaf_color>червоний</leaf_color>
+            <plant_average_size>40</plant_average_size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>25</temperature>
+            <light>true</light>
+            <watering>500</watering>
+        </growing_tips>
+        <multiplying>насінням</multiplying>
+    </flower>
+    <flower>
+        <name>nn</name>
+        <soil>дерново-підзолиста</soil>
+        <origin>aaa</origin>
+        <visual_parameters>
+            <stem_color>asd</stem_color>
+            <leaf_color>asd</leaf_color>
+            <plant_average_size>1</plant_average_size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>11</temperature>
+            <light>true</light>
+            <watering>333</watering>
+        </growing_tips>
+        <multiplying>насінням</multiplying>
+    </flower>
+
+</flowers>
